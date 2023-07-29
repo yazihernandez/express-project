@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@700&display=swap');
+
+/* FONT TYPES */
+/* font-family: 'Roboto', sans-serif; */
+/* font-family: 'Roboto Condensed', sans-serif; */
+
+/* DEFAULT */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    background-image: url('../images/background.jpg');
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.welcome{
+    padding-top:15vh;
+    padding-bottom: 30vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+.welcome a{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top:15vh;
+    padding-right: 20vw;
+    width: 80vw;
+}
+.aboutMe{
+    padding: 13vh 10vw 10vh 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: black;
+}
+.aboutMe h1{
+    font-size: 3vw;
+}
+.aboutMe p{
+    font-size: 1.2vw;
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: left;
+    padding-top:10vh;
+    width: 40vw;
+    gap: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}

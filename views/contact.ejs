@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+
+    <!-- link CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Link bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
+    crossorigin="anonymous">
+
+</head>
+<body>
+
+    <div class="contact">
+    <div>
+        <h2>This is my <%= title %>!</h2>
+        <p>Do reach out to me and I'll get back to you as soon as possible</p>
+    </div>
+
+    <!--Using ejs templating style for the first 2 forms  -->
+    <% for (var i=0; i<formTitles.length; i++) { %>
+    <div class="mb-3">
+        <label class="form-label"><%= formTitles[i] %></label>
+        <input type="<%= type[i] %>" class="form-control border-black shadow" placeholder="<%= placeholder[i] %>">
+    </div>
+    <% } %>
+
+    <!-- Message box is seperate -->
+    <div class="mb-3">
+        <label class="form-label">Message</label>
+        <textarea class="form-control border-black shadow" rows="3"></textarea>
+    </div>
+    <div class="buttons">
+    <a href="/" class="btn btn-outline-dark rounded-pill w-25">Back</a>
+    <button class="btn btn-light rounded-pill border-black w-25">Submit</button>
+    </div>
+    
+    </div>
+    
+    <!-- Bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
+    crossorigin="anonymous">
+    </script>
+
+</body>
+</html>

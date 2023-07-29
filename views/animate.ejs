@@ -1,0 +1,37 @@
+<!-- Animation for Homepage -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const introText = "<%- intro %>";
+        const aboutText = "<%- about %>";
+        const contactText = "<%- contact %>";
+
+        const h1Tag = document.querySelector('.welcome h1');
+        const aboutButton = document.getElementById('aboutButton');
+        const contactButton = document.getElementById('contactButton');
+
+        function changeTextWithTransition(text) {
+            h1Tag.style.opacity = '0';          // Start the opacity transition by setting it to 0
+            setTimeout(function () {
+                h1Tag.textContent = text;
+                h1Tag.style.opacity = '1';      // Fade in the new text by setting opacity back to 1
+            }, 100);                            // 2 seconds delay before changing the text
+        }
+
+        aboutButton.addEventListener('mouseenter', function () {
+            changeTextWithTransition(aboutText);  // replace introText with aboutText
+        });
+
+        contactButton.addEventListener('mouseenter', function () {
+            changeTextWithTransition(contactText); // replace introText with contactText
+        });
+
+        aboutButton.addEventListener('mouseleave', function () {
+            changeTextWithTransition(introText); //revert back to introText
+        });
+
+        contactButton.addEventListener('mouseleave', function () {
+            changeTextWithTransition(introText); //revert back to introText
+        });
+    });
+</script>
